@@ -53,7 +53,7 @@ export default function HeroSection() {
                   Welcome to My
                 </span>
                 <h1
-                  className="hero-heading font-black uppercase tracking-[0.05em] leading-[0.85] whitespace-nowrap h-[350px] sm:h-auto text-[13.5vw] sm:text-[13vw] md:text-[13.5vw] lg:text-[14vw] max-lg:-mr-[0.05em]"
+                  className="hero-heading font-black uppercase tracking-[0.05em] leading-[0.85] whitespace-nowrap h-[350px] sm:h-auto text-[56.652px] sm:text-[13vw] md:text-[13.5vw] lg:text-[14vw]"
                   style={{
                     fontFamily: 'Raleway',
                   }}
