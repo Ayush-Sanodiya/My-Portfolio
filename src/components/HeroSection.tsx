@@ -53,7 +53,7 @@ export default function HeroSection() {
                   Welcome to My
                 </span>
                 <h1
-                  className="hero-heading font-black uppercase tracking-[0.05em] leading-[0.85] whitespace-nowrap h-[350px] sm:h-auto text-[56.652px] sm:text-[13vw] md:text-[13.5vw] lg:text-[14vw]"
+                  className="hero-heading font-black uppercase tracking-[0.05em] leading-[0.85] whitespace-nowrap h-[350px] sm:h-auto text-[13.5vw] sm:text-[13vw] md:text-[13.5vw] lg:text-[14vw] max-lg:-mr-[0.05em]"
                   style={{
                     fontFamily: 'Raleway',
                   }}
@@ -76,9 +76,9 @@ export default function HeroSection() {
               className={`w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] max-sm:mt-[50px] ${isDraggable ? 'cursor-grab active:cursor-grabbing' : ''}`}
               drag={isDraggable}
               dragSnapToOrigin={true}
-              dragElastic={0.6}
-              dragTransition={{ bounceStiffness: 400, bounceDamping: 15 }}
-              whileDrag={{ scale: 1.05 }}
+              dragElastic={0.9}
+              dragTransition={{ bounceStiffness: 200, bounceDamping: 20 }}
+              whileDrag={{ scale: 1.03, filter: "drop-shadow(0 30px 40px rgba(0,0,0,0.9))" }}
             />
           </Magnet>
         </FadeIn>
