@@ -217,16 +217,23 @@ export default function TableOfContent() {
             </motion.div>
           </div>
 
-          <div className="w-full flex flex-col gap-4">
+          <div className="w-full flex flex-col gap-4" style={{ perspective: "1000px" }}>
             {tocItems.map((item, index) => (
               <motion.div
                 key={`mobile-${item.id}`}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={{ opacity: 0, rotateX: -45, y: 30, scale: 0.95 }}
+                whileInView={{ opacity: 1, rotateX: 0, y: 0, scale: 1 }}
+                whileTap={{ scale: 0.96, rotateX: 5 }}
+                viewport={{ once: true, margin: "50px" }}
+                transition={{ 
+                  duration: 0.7, 
+                  delay: index * 0.15, 
+                  type: "spring", 
+                  bounce: 0.4 
+                }}
                 onClick={() => handleItemClick()}
-                className="w-full bg-[#111] border border-white/5 rounded-[24px] p-5 sm:p-6 flex items-center justify-between active:scale-[0.98] transition-transform cursor-pointer relative overflow-hidden group"
+                className="w-full bg-[#111] border border-white/5 rounded-[24px] p-5 sm:p-6 flex items-center justify-between cursor-pointer relative overflow-hidden group"
+                style={{ transformOrigin: "top center" }}
               >
                 {/* Subtle gradient glow for mobile cards */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[radial-gradient(circle_at_top_right,rgba(255,138,0,0.08)_0%,transparent_70%)] pointer-events-none" />
