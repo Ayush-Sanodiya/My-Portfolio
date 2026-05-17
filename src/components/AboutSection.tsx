@@ -13,13 +13,13 @@ export default function AboutSection() {
           {/* Left Side: Content */}
           <div className="flex flex-col justify-center text-[#0C0C0C] z-30 lg:pt-10">
             <FadeIn delay={0.1} y={40}>
-              <h2 className="font-black leading-[0.9] tracking-tight text-[clamp(2.5rem,8.5vw,119px)] mb-2 whitespace-nowrap" style={{ fontFamily: 'Kanit' }}>
+              <h2 className="font-black leading-[0.9] tracking-tight text-[clamp(2.5rem,8.5vw,119px)] mb-2 whitespace-nowrap" style={{ fontFamily: 'Raleway' }}>
                 Namaste <span className="text-[#0C0C0C]">ji,</span>
               </h2>
             </FadeIn>
             
             <FadeIn delay={0.2} y={30} className="relative w-fit">
-              <h3 className="font-bold text-[clamp(1.5rem,5vw,48px)] tracking-tight" style={{ fontFamily: 'Kanit' }}>
+              <h3 className="font-bold text-[clamp(1.5rem,5vw,48px)] tracking-tight" style={{ fontFamily: 'Raleway' }}>
                 I am <span className="relative inline-block">
                   <div 
                     className="absolute bg-[#FFFF00] -z-10 transform -rotate-1"

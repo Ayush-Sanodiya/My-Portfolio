@@ -117,7 +117,7 @@ export default function ProjectsSection({
   return (
     <section id={id} className="bg-[#0C0C0C] rounded-t-[40px] sm:rounded-t-[60px] -mt-10 sm:-mt-16 md:-mt-20 pt-20 sm:pt-28 md:pt-32 pb-20 sm:pb-28 md:pb-32 z-10 relative">
       <div className="max-w-7xl mx-auto">
-        <h2 className="hero-heading font-black uppercase text-center text-[clamp(2.5rem,10vw,140px)] mb-6">
+        <h2 className="hero-heading font-black uppercase text-center text-[clamp(2.5rem,10vw,140px)] mb-6 font-display">
           {title}
         </h2>
         <p className="text-[#D7E2EA] font-medium text-center max-w-3xl mx-auto px-6 mb-12 text-[clamp(0.9rem,2.5vw,1.25rem)] opacity-80 leading-relaxed">

@@ -1,8 +1,21 @@
+import { useState, useEffect } from "react";
+import { motion } from "motion/react";
 import portraitImage from "../assets/images/regenerated_image_1778973582328.png";
 import FadeIn from "./FadeIn";
 import Magnet from "./Magnet";
 
 export default function HeroSection() {
+  const [isDraggable, setIsDraggable] = useState(false);
+
+  useEffect(() => {
+    const checkDraggable = () => {
+      setIsDraggable(window.innerWidth < 1024);
+    };
+    checkDraggable();
+    window.addEventListener("resize", checkDraggable);
+    return () => window.removeEventListener("resize", checkDraggable);
+  }, []);
+
   return (
     <section id="home" className="relative h-screen flex flex-col overflow-x-clip bg-[#0C0C0C]">
       {/* Background Decor */}
@@ -14,7 +27,7 @@ export default function HeroSection() {
       <FadeIn y={-20} className="fixed top-0 left-0 w-full px-4 md:px-10 py-3 md:py-4 z-50 pointer-events-none">
         <nav className="flex justify-between items-center w-full max-w-7xl mx-auto pointer-events-auto">
           <Magnet padding={50} strength={2}>
-            <div className="font-black text-base md:text-xl tracking-tighter text-white cursor-pointer">AYUSH.</div>
+            <div className="font-display font-black text-base md:text-xl tracking-[0.05em] text-white cursor-pointer">AYUSH.</div>
           </Magnet>
           <div className="flex gap-3 sm:gap-6 md:gap-10 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 md:px-8">
             {["Home", "About", "Works", "Contact"].map((item) => (
@@ -39,10 +52,10 @@ export default function HeroSection() {
                 <span className="text-[#D7E2EA] font-light uppercase tracking-[0.2em] sm:tracking-[0.4em] text-[clamp(0.6rem,2vw,1.4rem)] mt-0 pt-0 mb-[-3px] sm:mb-1 ml-[5px]">
                   Welcome to My
                 </span>
-                <h1 
+                <h1
                   className="hero-heading font-black uppercase tracking-[0.05em] leading-[0.85] whitespace-nowrap h-[350px] sm:h-auto text-[56.652px] sm:text-[13vw] md:text-[13.5vw] lg:text-[14vw]"
                   style={{
-                    fontFamily: 'Kanit',
+                    fontFamily: 'Raleway',
                   }}
                 >
                   Portfolio
@@ -57,10 +70,15 @@ export default function HeroSection() {
       <div className="absolute left-1/2 -translate-x-1/2 z-20 top-[55%] -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0 w-[85%] max-w-[280px] sm:max-w-none sm:w-[360px] md:w-[440px] lg:w-[520px]">
         <FadeIn delay={0.6} y={30}>
           <Magnet padding={150} strength={3}>
-            <img
+            <motion.img
               src={portraitImage}
               alt="Ayush Portfolio"
-              className="w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] max-sm:mt-[50px]"
+              className={`w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] max-sm:mt-[50px] ${isDraggable ? 'cursor-grab active:cursor-grabbing' : ''}`}
+              drag={isDraggable}
+              dragSnapToOrigin={true}
+              dragElastic={0.6}
+              dragTransition={{ bounceStiffness: 400, bounceDamping: 15 }}
+              whileDrag={{ scale: 1.05 }}
             />
           </Magnet>
         </FadeIn>
