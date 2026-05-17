@@ -16,7 +16,7 @@ export default function AboutSection() {
             {/* Left: Heading & Title */}
             <div className="flex flex-col justify-center text-[#1A1A1A] pr-2 sm:pr-0">
               <FadeIn delay={0.1} y={20}>
-                <h2 className="font-black leading-[1] tracking-tight text-[clamp(1.4rem,5.5vw,4.2rem)] whitespace-nowrap font-display">
+                <h2 className="font-black leading-[1] tracking-tight text-[clamp(1rem,7.5vw,4.5rem)] whitespace-nowrap font-display">
                   Namaste ji,
                 </h2>
               </FadeIn>

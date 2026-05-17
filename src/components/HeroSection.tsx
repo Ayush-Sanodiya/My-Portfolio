@@ -49,11 +49,11 @@ export default function HeroSection() {
           <FadeIn delay={0.15} y={40}>
             <div className="flex flex-col items-center w-full">
               <div className="flex flex-col items-start w-fit mx-auto max-md:pl-[0.05em]">
-                <span className="text-[#D7E2EA] font-light uppercase tracking-[0.2em] sm:tracking-[0.4em] text-[clamp(0.6rem,2vw,1.4rem)] mt-0 pt-0 mb-[-3px] sm:mb-1 ml-[5px]">
+                <span className="text-[#D7E2EA] font-light uppercase tracking-[0.2em] sm:tracking-[0.4em] text-[clamp(0.85rem,3.5vw,1.4rem)] mt-0 pt-0 mb-[-3px] sm:mb-1 ml-[5px]">
                   Welcome to My
                 </span>
                 <h1
-                  className="hero-heading font-black uppercase tracking-[0.05em] leading-[0.85] whitespace-nowrap h-[350px] sm:h-auto text-[11vw] md:text-[13.5vw] lg:text-[14vw]"
+                  className="hero-heading font-black uppercase tracking-[0.05em] leading-[0.85] whitespace-nowrap h-[350px] sm:h-auto text-[13.5vw] sm:text-[11vw] md:text-[13.5vw] lg:text-[14vw]"
                   style={{
                     fontFamily: 'Raleway',
                   }}
