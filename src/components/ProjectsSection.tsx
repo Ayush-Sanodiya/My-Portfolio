@@ -7,6 +7,13 @@ interface Project {
   category: string;
   title: string;
   images: string[];
+  layoutData?: {
+    titleTop1: string;
+    titleTop2: string;
+    titleBottom: string;
+    subtitleMiddle: string;
+    subtitleEnd: string;
+  };
 }
 
 const defaultProjects: Project[] = [
@@ -14,51 +21,66 @@ const defaultProjects: Project[] = [
     id: "01",
     category: "Branding",
     title: "Branding",
-    images: [
-      "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055344_5eff02e0-87a5-41ce-b64f-eb08da8f33db.png&w=1280&q=85",
-      "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055431_11d841fd-8b41-46a5-82e4-b04f2407a7d8.png&w=1280&q=85",
-      "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055451_e317bf2d-28d4-48cc-86b0-6f72f25b6327.png&w=1280&q=85",
-    ],
+    images: [],
+    layoutData: {
+      titleTop1: "Brand",
+      titleTop2: "",
+      titleBottom: "Identity",
+      subtitleMiddle: "Identity Meets",
+      subtitleEnd: "Strategy"
+    }
   },
   {
     id: "02",
     category: "Logo Design",
     title: "Logo Design",
-    images: [
-      "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055654_911201c5-36d9-4bc6-bac7-331adfce159f.png&w=1280&q=85",
-      "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055723_5ceda0b8-d9c2-4665-b2e3-83ba19ba76d1.png&w=1280&q=85",
-      "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055753_adc5dcbd-a8e6-49c0-b43a-9b030d835cea.png&w=1280&q=85",
-    ],
+    images: [],
+    layoutData: {
+      titleTop1: "Logo",
+      titleTop2: "",
+      titleBottom: "Design",
+      subtitleMiddle: "Vision Meets",
+      subtitleEnd: "Symbol"
+    }
   },
   {
     id: "03",
     category: "Social Media",
     title: "Social Media",
-    images: [
-      "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055759_963cfb0b-4bd1-4b0f-9d0a-09bd6cf95b2f.png&w=1280&q=85",
-      "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_060108_438f781a-9846-4dcc-89ab-c4e6cb830f5b.png&w=1280&q=85",
-      "https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055818_9d062121-ad7e-46b9-999a-1a6a692ef1ee.png&w=1280&q=85",
-    ],
+    images: [],
+    layoutData: {
+      titleTop1: "Social",
+      titleTop2: "Media",
+      titleBottom: "Creatives",
+      subtitleMiddle: "Creativity Meets",
+      subtitleEnd: "Conversation"
+    }
   },
   {
     id: "04",
     category: "Product Ads",
     title: "Products Ads",
-    images: [
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1280&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1280&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=1280&auto=format&fit=crop",
-    ],
+    images: [],
+    layoutData: {
+      titleTop1: "Product",
+      titleTop2: "",
+      titleBottom: "Ads",
+      subtitleMiddle: "Product Meets",
+      subtitleEnd: "Market"
+    }
   },
   {
     id: "05",
     category: "Poster Design",
     title: "Poster Design",
-    images: [
-      "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?q=80&w=1280&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1581291518137-903383a60a01?q=80&w=1280&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1280&auto=format&fit=crop",
-    ],
+    images: [],
+    layoutData: {
+      titleTop1: "Poster",
+      titleTop2: "",
+      titleBottom: "Design",
+      subtitleMiddle: "Art Meets",
+      subtitleEnd: "Message"
+    }
   },
 ];
 
@@ -154,7 +176,7 @@ function ProjectCard({ project, index, total }: { project: Project; index: numbe
     offset: ["start end", "start start"],
   });
 
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1 - (total - 1 - index) * 0.03]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1 - (total - 1) * 0.03]);
 
   return (
     <motion.div 
@@ -169,66 +191,96 @@ function ProjectCard({ project, index, total }: { project: Project; index: numbe
         layout: { duration: 0.4 }
       }}
       ref={container} 
-      className={`sticky top-20 md:top-32 w-full max-w-6xl flex items-center justify-center py-4 ${project.images.length > 0 ? "h-auto min-h-[60vh] sm:h-[80vh] md:h-[85vh]" : "h-auto"}`}
+      className="sticky top-0 h-screen w-full max-w-6xl flex items-center justify-center"
     >
       <motion.div 
         style={{ 
           scale, 
-          top: `calc(4vh + ${index * 20}px)`,
           willChange: "transform" 
         }} 
-        className="w-full h-full bg-[#0C0C0C] border-2 border-[#D7E2EA] rounded-[30px] sm:rounded-[50px] md:rounded-[60px] p-4 sm:p-6 md:p-8 flex flex-col gap-4 md:gap-8 shadow-2xl"
+        className="w-full h-[65vh] sm:h-[80vh] md:h-[85vh] bg-[#0C0C0C] border-2 border-[#D7E2EA] rounded-[30px] sm:rounded-[50px] md:rounded-[60px] p-4 sm:p-6 md:p-8 flex flex-col gap-4 md:gap-8 shadow-2xl relative"
       >
-        {/* Top row */}
-        <div className="flex flex-nowrap justify-between items-center gap-1.5 sm:gap-4">
-          <div className="flex items-center gap-1.5 sm:gap-6 min-w-0">
-            <span 
-              className="font-black text-transparent text-[clamp(1rem,5vw,80px)] leading-none italic flex-shrink-0"
-              style={{ WebkitTextStroke: '1px rgba(215, 226, 234, 0.4)' }}
-            >
-              {project.id}
-            </span>
-            <div className="flex flex-col min-w-0">
-              <h3 className="text-[#D7E2EA] font-medium uppercase text-[clamp(1.2rem,4vw,3.5rem)] whitespace-nowrap overflow-hidden text-ellipsis">
-                {project.title}
-              </h3>
-            </div>
-          </div>
+        {/* Top row - Live Project Button Only */}
+        <div className="flex justify-end items-center w-full relative z-20">
           <div className="scale-75 sm:scale-100 origin-right flex-shrink-0">
             <LiveProjectButton />
           </div>
         </div>
 
-        {/* Image Grid */}
-        {project.images.length > 0 && (
-          <div className="flex-1 min-h-0 grid grid-cols-1 sm:grid-cols-10 gap-3 md:gap-4 overflow-hidden">
-            <div className="order-2 sm:order-1 sm:col-span-4 flex flex-row sm:flex-col gap-3 md:gap-4">
-              {project.images[0] && (
-                <img 
-                  src={project.images[0]} 
-                  alt={project.title} 
-                  className="w-1/2 sm:w-full h-[80px] sm:h-[clamp(130px,16vw,230px)] object-cover rounded-[15px] sm:rounded-[40px] md:rounded-[50px]" 
-                />
-              )}
-              {project.images[1] && (
-                <img 
-                  src={project.images[1]} 
-                  alt={project.title} 
-                  className="w-1/2 sm:w-full flex-1 min-h-[80px] sm:min-h-[clamp(160px,22vw,340px)] object-cover rounded-[15px] sm:rounded-[40px] md:rounded-[50px]" 
-                />
-              )}
+        {/* Custom Layout for all cards */}
+        {(() => {
+          const fallbackTitleWords = project.title.split(' ');
+          const titleTop1 = project.layoutData?.titleTop1 || fallbackTitleWords[0] || '';
+          const titleTop2 = project.layoutData?.titleTop2 || (fallbackTitleWords.length > 2 ? fallbackTitleWords[1] : '');
+          const titleBottom = project.layoutData?.titleBottom || (fallbackTitleWords.length > 2 ? fallbackTitleWords.slice(2).join(' ') : (fallbackTitleWords.length > 1 ? fallbackTitleWords.slice(1).join(' ') : 'Works'));
+          
+          const subtitleMiddle = project.layoutData?.subtitleMiddle || "Creativity Meets";
+          const subtitleEnd = project.layoutData?.subtitleEnd || "Conversation";
+
+          return (
+            <div className="flex-1 min-h-0 relative overflow-hidden bg-[#0C0C0C] rounded-[15px] sm:rounded-[30px] md:rounded-[40px] border border-white/5 flex flex-col">
+              {/* Premium ambient radial glows */}
+              <div className="absolute left-0 bottom-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] rounded-full bg-[radial-gradient(circle_at_bottom_left,rgba(255,138,0,0.06)_0%,transparent_70%)] pointer-events-none z-0" />
+              <div className="absolute right-0 top-0 w-[250px] md:w-[400px] h-[250px] md:h-[400px] rounded-full bg-[radial-gradient(circle_at_top_right,rgba(215,226,234,0.03)_0%,transparent_70%)] pointer-events-none z-0" />
+
+              <div className="w-full h-full flex flex-col justify-between p-6 sm:p-10 md:p-14 relative z-10">
+                {/* Top Row: Heading and Outlined Numbering */}
+                <div className="flex flex-col sm:flex-row justify-between items-start gap-4 sm:gap-8 w-full">
+                  {/* Outline Slide Number */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+                    className="font-display font-bold text-[clamp(3rem,8vw,120px)] leading-none text-transparent [-webkit-text-stroke:2px_white] select-none self-start"
+                  >
+                    {project.id}
+                  </motion.div>
+
+                  {/* Main Title */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                    className="flex flex-col select-none sm:items-end sm:text-right"
+                  >
+                    <h1 className="font-display font-black uppercase text-[clamp(2rem,6vw,90px)] leading-[0.85] tracking-tight">
+                      <span className="bg-gradient-to-r from-[#FF8A00] to-[#FFC700] bg-clip-text text-transparent">
+                        {titleTop1}
+                      </span>{" "}
+                      {titleTop2 && (
+                        <span className="text-white">
+                          {titleTop2}
+                        </span>
+                      )}
+                    </h1>
+                    <h1 className="font-display font-black uppercase text-[clamp(2rem,6vw,90px)] leading-[0.85] tracking-tight bg-gradient-to-r from-[#D7E2EA] to-[#D7E2EA]/30 bg-clip-text text-transparent mt-1">
+                      {titleBottom}
+                    </h1>
+                  </motion.div>
+                </div>
+
+                {/* Bottom Row: Elegant Caveat Cursive Subtitle */}
+                <div className="flex justify-end w-full mt-auto pt-8">
+                  <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                    className="font-['Caveat'] text-[clamp(1.4rem,2.5vw,40px)] leading-tight text-[#D7E2EA] tracking-wide select-none text-right"
+                  >
+                    <span>Where </span>
+                    <span className="bg-gradient-to-r from-[#FF8A00] to-[#FFC700] bg-clip-text text-transparent">
+                      {subtitleMiddle}
+                    </span>{" "}
+                    <span>{subtitleEnd}</span>
+                  </motion.div>
+                </div>
+              </div>
             </div>
-            <div className="order-1 sm:order-2 sm:col-span-6 h-[150px] sm:h-full">
-              {project.images[2] && (
-                <img 
-                  src={project.images[2]} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover rounded-[15px] sm:rounded-[40px] md:rounded-[50px]" 
-                />
-              )}
-            </div>
-          </div>
-        )}
+          );
+        })()}
       </motion.div>
     </motion.div>
   );
