@@ -22,6 +22,7 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
   .glow-bg {
     background: radial-gradient(circle at center, rgba(187, 204, 215, 0.05) 0%, transparent 70%);
   }

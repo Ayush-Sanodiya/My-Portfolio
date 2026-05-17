@@ -8,10 +8,10 @@ const socialLinks = [
     href: "mailto:ayushsanodiya7@gmail.com",
     icon: (
       <svg viewBox="0 0 48 48" className="w-5 h-5 sm:w-[22px] sm:h-[22px] flex-shrink-0">
-        <circle cx="24" cy="24" r="24" fill="#6B9DC2"/>
-        <rect x="12" y="16" width="24" height="16" rx="2" fill="#fff"/>
-        <path d="M12 16l12 10 12-10" fill="none" stroke="#6B9DC2" strokeWidth="1.5" strokeLinejoin="round"/>
-        <path d="M12 32l9-7M36 32l-9-7" fill="none" stroke="#6B9DC2" strokeWidth="1.5" strokeLinecap="round"/>
+        <circle cx="24" cy="24" r="24" fill="#6B9DC2" />
+        <rect x="12" y="16" width="24" height="16" rx="2" fill="#fff" />
+        <path d="M12 16l12 10 12-10" fill="none" stroke="#6B9DC2" strokeWidth="1.5" strokeLinejoin="round" />
+        <path d="M12 32l9-7M36 32l-9-7" fill="none" stroke="#6B9DC2" strokeWidth="1.5" strokeLinecap="round" />
       </svg>
     ),
   },
@@ -20,8 +20,8 @@ const socialLinks = [
     href: "https://wa.me/916264735399",
     icon: (
       <svg viewBox="0 0 48 48" className="w-5 h-5 sm:w-[22px] sm:h-[22px] flex-shrink-0">
-        <circle cx="24" cy="24" r="24" fill="#25D366"/>
-        <path d="M24 12.5c-6.35 0-11.5 5.15-11.5 11.5 0 2.03.53 3.93 1.46 5.59L12.5 35.5l6.1-1.6A11.44 11.44 0 0024 35.5c6.35 0 11.5-5.15 11.5-11.5S30.35 12.5 24 12.5zm0 20.8a9.26 9.26 0 01-4.73-1.3l-.34-.2-3.52.92.94-3.44-.22-.35A9.28 9.28 0 0114.7 24c0-5.13 4.17-9.3 9.3-9.3s9.3 4.17 9.3 9.3-4.17 9.3-9.3 9.3zm5.1-6.96c-.28-.14-1.65-.82-1.91-.91-.25-.1-.44-.14-.62.14-.19.28-.72.91-.88 1.1-.16.18-.33.2-.61.07-.28-.14-1.18-.44-2.25-1.39-.83-.74-1.39-1.66-1.56-1.94-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.5.14-.16.19-.28.28-.47.1-.18.05-.35-.02-.49-.07-.14-.62-1.5-.85-2.06-.22-.54-.45-.47-.62-.48h-.53c-.18 0-.49.07-.74.35-.25.28-.97.95-.97 2.31s1 2.68 1.13 2.87c.14.18 1.96 2.99 4.74 4.19.66.29 1.18.46 1.58.59.67.21 1.27.18 1.75.11.53-.08 1.65-.67 1.88-1.33.24-.65.24-1.21.17-1.33-.07-.11-.25-.18-.53-.32z" fill="#fff"/>
+        <circle cx="24" cy="24" r="24" fill="#25D366" />
+        <path d="M24 12.5c-6.35 0-11.5 5.15-11.5 11.5 0 2.03.53 3.93 1.46 5.59L12.5 35.5l6.1-1.6A11.44 11.44 0 0024 35.5c6.35 0 11.5-5.15 11.5-11.5S30.35 12.5 24 12.5zm0 20.8a9.26 9.26 0 01-4.73-1.3l-.34-.2-3.52.92.94-3.44-.22-.35A9.28 9.28 0 0114.7 24c0-5.13 4.17-9.3 9.3-9.3s9.3 4.17 9.3 9.3-4.17 9.3-9.3 9.3zm5.1-6.96c-.28-.14-1.65-.82-1.91-.91-.25-.1-.44-.14-.62.14-.19.28-.72.91-.88 1.1-.16.18-.33.2-.61.07-.28-.14-1.18-.44-2.25-1.39-.83-.74-1.39-1.66-1.56-1.94-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.5.14-.16.19-.28.28-.47.1-.18.05-.35-.02-.49-.07-.14-.62-1.5-.85-2.06-.22-.54-.45-.47-.62-.48h-.53c-.18 0-.49.07-.74.35-.25.28-.97.95-.97 2.31s1 2.68 1.13 2.87c.14.18 1.96 2.99 4.74 4.19.66.29 1.18.46 1.58.59.67.21 1.27.18 1.75.11.53-.08 1.65-.67 1.88-1.33.24-.65.24-1.21.17-1.33-.07-.11-.25-.18-.53-.32z" fill="#fff" />
       </svg>
     ),
   },
@@ -32,16 +32,16 @@ const socialLinks = [
       <svg viewBox="0 0 48 48" className="w-5 h-5 sm:w-[22px] sm:h-[22px] flex-shrink-0">
         <defs>
           <linearGradient id="igGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#FFC107"/>
-            <stop offset="30%" stopColor="#F44336"/>
-            <stop offset="60%" stopColor="#E040FB"/>
-            <stop offset="100%" stopColor="#9C27B0"/>
+            <stop offset="0%" stopColor="#FFC107" />
+            <stop offset="30%" stopColor="#F44336" />
+            <stop offset="60%" stopColor="#E040FB" />
+            <stop offset="100%" stopColor="#9C27B0" />
           </linearGradient>
         </defs>
-        <circle cx="24" cy="24" r="24" fill="url(#igGrad)"/>
-        <rect x="14" y="14" width="20" height="20" rx="6" fill="none" stroke="#fff" strokeWidth="2"/>
-        <circle cx="24" cy="24" r="5" fill="none" stroke="#fff" strokeWidth="2"/>
-        <circle cx="31" cy="17" r="1.5" fill="#fff"/>
+        <circle cx="24" cy="24" r="24" fill="url(#igGrad)" />
+        <rect x="14" y="14" width="20" height="20" rx="6" fill="none" stroke="#fff" strokeWidth="2" />
+        <circle cx="24" cy="24" r="5" fill="none" stroke="#fff" strokeWidth="2" />
+        <circle cx="31" cy="17" r="1.5" fill="#fff" />
       </svg>
     ),
   },
@@ -50,8 +50,8 @@ const socialLinks = [
     href: "http://www.linkedin.com/in/ayush-sanodiya-880a90238",
     icon: (
       <svg viewBox="0 0 48 48" className="w-5 h-5 sm:w-[22px] sm:h-[22px] flex-shrink-0">
-        <circle cx="24" cy="24" r="24" fill="#0077B5"/>
-        <path d="M18 20v12h-3.5V20H18zm-1.75-5.5a2 2 0 110 4 2 2 0 010-4zM20.5 20H24v1.6c.5-.95 1.8-1.95 3.7-1.95 3.95 0 4.68 2.6 4.68 5.98V32H28.9v-5.6c0-1.34-.02-3.05-1.86-3.05-1.86 0-2.15 1.45-2.15 2.96V32H20.5V20z" fill="#fff"/>
+        <circle cx="24" cy="24" r="24" fill="#0077B5" />
+        <path d="M18 20v12h-3.5V20H18zm-1.75-5.5a2 2 0 110 4 2 2 0 010-4zM20.5 20H24v1.6c.5-.95 1.8-1.95 3.7-1.95 3.95 0 4.68 2.6 4.68 5.98V32H28.9v-5.6c0-1.34-.02-3.05-1.86-3.05-1.86 0-2.15 1.45-2.15 2.96V32H20.5V20z" fill="#fff" />
       </svg>
     ),
   },

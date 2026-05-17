@@ -1,5 +1,5 @@
 import { motion, useInView } from "motion/react";
-import React, { ReactNode, useRef } from "react";
+import React, { ReactNode, useRef, useMemo } from "react";
 
 interface FadeInProps {
   children: ReactNode;
@@ -24,7 +24,7 @@ export default function FadeIn({
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "0px" });
 
-  const Component = motion.create(as);
+  const Component = useMemo(() => motion.create(as), [as]);
 
   return (
     <Component

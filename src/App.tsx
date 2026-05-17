@@ -16,7 +16,7 @@ export default function App() {
       <div className="bg-black h-[30vh] w-full relative z-10" />
       <ProjectsSection />
       <ContactSection />
-      
+
       {/* Footer / Final Contact CTA */}
       <footer className="bg-[#0C0C0C] py-20 px-6 text-center border-t border-white/5">
         <p className="text-[#D7E2EA]/40 uppercase tracking-[0.3em] text-xs">

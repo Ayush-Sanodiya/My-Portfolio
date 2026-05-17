@@ -92,10 +92,10 @@ interface ProjectsSectionProps {
   projects?: Project[];
 }
 
-export default function ProjectsSection({ 
-  id = "works", 
-  title = "Works", 
-  projects: initialProjects = defaultProjects 
+export default function ProjectsSection({
+  id = "works",
+  title = "Works",
+  projects: initialProjects = defaultProjects
 }: ProjectsSectionProps) {
   const [activeCategory, setActiveCategory] = useState("All");
 
@@ -110,8 +110,8 @@ export default function ProjectsSection({
     return () => window.removeEventListener("setCategory", handleSetCategory);
   }, []);
 
-  const filteredProjects = activeCategory === "All" 
-    ? initialProjects 
+  const filteredProjects = activeCategory === "All"
+    ? initialProjects
     : initialProjects.filter(p => p.category === activeCategory);
 
   return (
@@ -131,11 +131,10 @@ export default function ProjectsSection({
               id={`filter-${cat.toLowerCase().replace(/\s+/g, '-')}`}
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2.5 rounded-full text-sm md:text-base font-semibold transition-all duration-300 border ${
-                activeCategory === cat 
-                  ? "bg-[#D7E2EA] text-[#0C0C0C] border-[#D7E2EA]" 
+              className={`px-5 py-2.5 rounded-full text-sm md:text-base font-semibold transition-all duration-300 border ${activeCategory === cat
+                  ? "bg-[#D7E2EA] text-[#0C0C0C] border-[#D7E2EA]"
                   : "bg-transparent text-[#D7E2EA] border-[#D7E2EA]/20 hover:border-[#D7E2EA]/60"
-              }`}
+                }`}
             >
               {cat}
             </button>
@@ -145,17 +144,17 @@ export default function ProjectsSection({
         <div className="flex flex-col items-center gap-24 md:gap-32 px-4 min-h-[60vh]">
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project, index) => (
-              <ProjectCard 
-                key={project.id} 
-                project={project} 
-                index={index} 
-                total={filteredProjects.length} 
+              <ProjectCard
+                key={project.id}
+                project={project}
+                index={index}
+                total={filteredProjects.length}
               />
             ))}
           </AnimatePresence>
-          
+
           {filteredProjects.length === 0 && (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className="flex flex-col items-center justify-center py-20 text-[#D7E2EA]/40"
@@ -179,25 +178,25 @@ function ProjectCard({ project, index, total }: { project: Project; index: numbe
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1 - (total - 1) * 0.03]);
 
   return (
-    <motion.div 
+    <motion.div
       layout
       key={project.id}
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 40, scale: 0.95 }}
-      transition={{ 
-        duration: 0.5, 
+      transition={{
+        duration: 0.5,
         ease: [0.22, 1, 0.36, 1],
         layout: { duration: 0.4 }
       }}
-      ref={container} 
+      ref={container}
       className="sticky top-0 h-screen w-full max-w-6xl flex items-center justify-center"
     >
-      <motion.div 
-        style={{ 
-          scale, 
-          willChange: "transform" 
-        }} 
+      <motion.div
+        style={{
+          scale,
+          willChange: "transform"
+        }}
         className="w-full h-[65vh] sm:h-[80vh] md:h-[85vh] bg-[#0C0C0C] border-2 border-[#D7E2EA] rounded-[30px] sm:rounded-[50px] md:rounded-[60px] p-4 sm:p-6 md:p-8 flex flex-col gap-4 md:gap-8 shadow-2xl relative"
       >
         {/* Top row - Live Project Button Only */}
@@ -213,7 +212,7 @@ function ProjectCard({ project, index, total }: { project: Project; index: numbe
           const titleTop1 = project.layoutData?.titleTop1 || fallbackTitleWords[0] || '';
           const titleTop2 = project.layoutData?.titleTop2 || (fallbackTitleWords.length > 2 ? fallbackTitleWords[1] : '');
           const titleBottom = project.layoutData?.titleBottom || (fallbackTitleWords.length > 2 ? fallbackTitleWords.slice(2).join(' ') : (fallbackTitleWords.length > 1 ? fallbackTitleWords.slice(1).join(' ') : 'Works'));
-          
+
           const subtitleMiddle = project.layoutData?.subtitleMiddle || "Creativity Meets";
           const subtitleEnd = project.layoutData?.subtitleEnd || "Conversation";
 

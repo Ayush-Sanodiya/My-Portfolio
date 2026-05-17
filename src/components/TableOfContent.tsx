@@ -94,12 +94,12 @@ export default function TableOfContent() {
   return (
     <section className="bg-[#0C0C0C] text-[#D7E2EA] px-4 sm:px-8 md:px-16 pt-8 sm:pt-10 md:pt-12 pb-10 sm:pb-12 md:pb-16 relative z-10 -mt-1 border-t border-white/5 overflow-hidden">
       <div className="max-w-[1400px] mx-auto w-full flex flex-col items-center">
-        
+
         {/* Desktop Design (Shown only on md and up) */}
         <div className="hidden md:flex flex-col items-center w-full">
           {/* Massive Hero Heading */}
           <div className="flex flex-col items-center mb-8 md:mb-12 w-full">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -134,7 +134,7 @@ export default function TableOfContent() {
                   onMouseEnter={() => setHoveredIndex(index)}
                 >
                   {/* Ambient Radial Glow Background (only visible on hover) */}
-                  <div 
+                  <div
                     className={`absolute inset-0 w-full h-full pointer-events-none transition-opacity duration-700 ease-out ${isHovered ? 'opacity-100' : 'opacity-0'}`}
                     style={{
                       background: 'radial-gradient(ellipse at center, rgba(255,138,0,0.06) 0%, transparent 60%)'
@@ -150,10 +150,10 @@ export default function TableOfContent() {
                     className="flex items-center justify-between py-3 sm:py-5 border-b border-white/5 cursor-default relative z-10 w-full group-hover:border-[#FF8A00]/30 transition-colors duration-500"
                   >
                     <div className="flex items-center gap-6 sm:gap-12 relative w-full overflow-hidden">
-                      
+
                       {/* Outline Index Number (Background Layer) */}
-                      <motion.span 
-                        animate={{ 
+                      <motion.span
+                        animate={{
                           x: isHovered ? 20 : 0,
                           opacity: isHovered ? 0.3 : 0.1
                         }}
@@ -164,7 +164,7 @@ export default function TableOfContent() {
                       </motion.span>
 
                       {/* Title and Subtitle Container */}
-                      <motion.div 
+                      <motion.div
                         animate={{ x: isHovered ? 40 : 0 }}
                         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                         className="flex flex-col pl-[12vw] sm:pl-[10vw] md:pl-[105px]"
@@ -172,12 +172,12 @@ export default function TableOfContent() {
                         <h3 className={`font-bold font-display uppercase tracking-tight text-[clamp(1.5rem,3.5vw,52px)] leading-[0.9] transition-all duration-500 ${isHovered ? 'bg-gradient-to-r from-[#FF8A00] to-[#FFC700] bg-clip-text text-transparent' : 'text-white'}`}>
                           {item.title}
                         </h3>
-                        
+
                         {/* Subtitle that slides in on hover */}
                         <div className="h-0 md:h-[clamp(1.2rem,2vw,32px)] mt-1">
                           <AnimatePresence>
                             {isHovered && (
-                              <motion.p 
+                              <motion.p
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -20 }}
@@ -203,7 +203,7 @@ export default function TableOfContent() {
         {/* Mobile Design (Shown only on mobile) */}
         <div className="md:hidden w-full flex flex-col items-center">
           <div className="flex flex-col items-center mb-10 w-full">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -230,7 +230,7 @@ export default function TableOfContent() {
               >
                 {/* Subtle gradient glow for mobile cards */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[radial-gradient(circle_at_top_right,rgba(255,138,0,0.08)_0%,transparent_70%)] pointer-events-none" />
-                
+
                 <div className="flex items-center gap-4 sm:gap-6 relative z-10">
                   <span className="font-display font-black text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.2)] text-3xl sm:text-4xl">
                     {item.id}
@@ -244,7 +244,7 @@ export default function TableOfContent() {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0 rounded-full bg-white/5 flex items-center justify-center border border-white/10 text-[#FF8A00] group-active:bg-[#FF8A00]/20 transition-colors relative z-10">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 sm:w-5 sm:h-5 transform rotate-45">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
