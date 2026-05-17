@@ -9,23 +9,10 @@
 }
 
 @layer base {
-  :root {
-    color-scheme: dark;
-  }
-  
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
-  }
-
-  html.light-theme {
-    filter: invert(1) hue-rotate(180deg);
-    background-color: white;
-  }
-  
-  html.light-theme img,
-  html.light-theme video {
-    filter: invert(1) hue-rotate(180deg);
+    color-scheme: dark;
   }
 }
 

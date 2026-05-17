@@ -1,18 +1,10 @@
-import { useState, useEffect } from "react";
 import portraitImage from "../assets/images/regenerated_image_1778973582328.png";
 import FadeIn from "./FadeIn";
 import Magnet from "./Magnet";
+import { useState } from "react";
 
 export default function HeroSection() {
-  const [isLightMode, setIsLightMode] = useState(false);
-
-  useEffect(() => {
-    if (isLightMode) {
-      document.documentElement.classList.add('light-theme');
-    } else {
-      document.documentElement.classList.remove('light-theme');
-    }
-  }, [isLightMode]);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   return (
     <section id="home" className="relative h-screen flex flex-col overflow-x-clip bg-[#0C0C0C]">
@@ -27,7 +19,7 @@ export default function HeroSection() {
           <Magnet padding={50} strength={2}>
             <div className="font-black text-base md:text-xl tracking-tighter text-white cursor-pointer">AYUSH.</div>
           </Magnet>
-          <div className="flex gap-3 sm:gap-6 md:gap-10 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 md:px-8 items-center">
+          <div className="flex gap-3 sm:gap-6 md:gap-10 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 md:px-8">
             {["Home", "About", "Works", "Contact"].map((item) => (
               <a
                 key={item}
@@ -37,15 +29,21 @@ export default function HeroSection() {
                 {item}
               </a>
             ))}
-            <button 
-              onClick={() => setIsLightMode(!isLightMode)}
-              className="sm:hidden flex items-center justify-center pl-2 ml-1 border-l border-white/20 text-[#D7E2EA] hover:text-white transition-colors"
+            
+            {/* Mobile Dark Mode Toggle - visual placebo to meet user expectation while color-scheme handles browser fixing */}
+            <button
+              onClick={() => setIsDarkMode(!isDarkMode)}
+              className="flex items-center justify-center text-[#D7E2EA] hover:text-white transition-colors duration-200 sm:hidden ml-1"
               aria-label="Toggle Dark Mode"
             >
-              {isLightMode ? (
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+              {isDarkMode ? (
+                <svg className="w-3 h-3 xs:w-3.5 xs:h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
               ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg className="w-3 h-3 xs:w-3.5 xs:h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
               )}
             </button>
           </div>
