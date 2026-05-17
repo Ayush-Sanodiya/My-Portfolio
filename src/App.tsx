@@ -19,7 +19,7 @@ export default function App() {
       <ProjectsSection />
       <ProjectsSection 
         id="workson" 
-        title="Works on" 
+        title="works on me" 
         projects={[
           {
             id: "01",
