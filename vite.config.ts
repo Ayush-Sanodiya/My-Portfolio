@@ -9,7 +9,7 @@ export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
 
   // Automated GitHub sync lock check
-  const lockPath = path.resolve(__dirname, '.git-pushed.lock');
+  const lockPath = path.resolve(__dirname, '.git-pushed-2.lock');
   if (!fs.existsSync(lockPath)) {
     try {
       fs.writeFileSync(lockPath, 'done');
