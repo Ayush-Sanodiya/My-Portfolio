@@ -244,7 +244,7 @@ function ProjectCard({ project, index, total }: { project: Project; index: numbe
                     transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                     className="flex flex-col select-none sm:items-end sm:text-right"
                   >
-                    <h1 className="font-display font-black uppercase text-[clamp(2rem,6vw,90px)] leading-[0.85] tracking-tight">
+                    <h3 className="font-display font-black uppercase text-[clamp(2rem,6vw,90px)] leading-[0.85] tracking-tight">
                       <span className="bg-gradient-to-r from-[#FF8A00] to-[#FFC700] bg-clip-text text-transparent">
                         {titleTop1}
                       </span>{" "}
@@ -253,10 +253,10 @@ function ProjectCard({ project, index, total }: { project: Project; index: numbe
                           {titleTop2}
                         </span>
                       )}
-                    </h1>
-                    <h1 className="font-display font-black uppercase text-[clamp(2rem,6vw,90px)] leading-[0.85] tracking-tight bg-gradient-to-r from-[#D7E2EA] to-[#D7E2EA]/30 bg-clip-text text-transparent mt-1">
+                    </h3>
+                    <h3 className="font-display font-black uppercase text-[clamp(2rem,6vw,90px)] leading-[0.85] tracking-tight bg-gradient-to-r from-[#D7E2EA] to-[#D7E2EA]/30 bg-clip-text text-transparent mt-1">
                       {titleBottom}
-                    </h1>
+                    </h3>
                   </motion.div>
                 </div>
 

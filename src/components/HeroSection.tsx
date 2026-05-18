@@ -20,11 +20,11 @@ export default function HeroSection() {
     <section id="home" className="relative h-screen flex flex-col overflow-x-clip bg-[#0C0C0C]">
       {/* Background Decor */}
       <div className="absolute inset-0 glow-bg pointer-events-none z-0"></div>
-      <img src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/moon_icon.11395d36.png" className="absolute top-[12%] left-[4%] w-[60px] sm:w-[90px] md:w-[120px] opacity-20 blur-[1px] rotate-12 pointer-events-none" alt="" />
-      <img src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/lego_icon-1.703bb594.png" className="absolute top-[15%] right-[6%] w-[50px] sm:w-[80px] md:w-[100px] opacity-15 -rotate-12 pointer-events-none" alt="" />
+      <img src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/moon_icon.11395d36.png" className="absolute top-[12%] left-[4%] w-[60px] sm:w-[90px] md:w-[120px] opacity-20 blur-[1px] rotate-12 pointer-events-none" alt="Decorative Moon Icon" role="presentation" />
+      <img src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/lego_icon-1.703bb594.png" className="absolute top-[15%] right-[6%] w-[50px] sm:w-[80px] md:w-[100px] opacity-15 -rotate-12 pointer-events-none" alt="Decorative Lego Icon" role="presentation" />
 
       {/* Navbar */}
-      <FadeIn y={-20} className="fixed top-0 left-0 w-full px-4 md:px-10 py-3 md:py-4 z-50 pointer-events-none">
+      <FadeIn as="header" y={-20} className="fixed top-0 left-0 w-full px-4 md:px-10 py-3 md:py-4 z-50 pointer-events-none">
         <nav className="flex justify-between items-center w-full max-w-7xl mx-auto pointer-events-auto">
           <Magnet padding={50} strength={2}>
             <div className="font-display font-black text-base md:text-xl tracking-[0.05em] text-white cursor-pointer">AYUSH.</div>
@@ -72,7 +72,7 @@ export default function HeroSection() {
           <Magnet padding={150} strength={3}>
             <motion.img
               src={portraitImage}
-              alt="Ayush Portfolio"
+              alt="Ayush Sanodiya - Creative Graphic Designer Portrait"
               className={`w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] max-sm:mt-[50px] ${isDraggable ? 'cursor-grab active:cursor-grabbing' : ''}`}
               drag={isDraggable}
               dragSnapToOrigin={true}

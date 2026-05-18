@@ -86,7 +86,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="bg-[#0C0C0C] py-20 sm:py-28 md:py-32 px-5 sm:px-8 relative overflow-hidden rounded-t-[40px] sm:rounded-t-[60px] -mt-10 sm:-mt-16 md:-mt-20 z-20">
+    <section id="contact" aria-labelledby="contact-title" className="bg-[#0C0C0C] py-20 sm:py-28 md:py-32 px-5 sm:px-8 relative overflow-hidden rounded-t-[40px] sm:rounded-t-[60px] -mt-10 sm:-mt-16 md:-mt-20 z-20">
       {/* Decorative Glows */}
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#FF8A00]/5 blur-[150px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#7C3AED]/5 blur-[120px] rounded-full pointer-events-none" />
@@ -101,7 +101,7 @@ export default function ContactSection() {
                 Contact
               </span>
 
-              <h2 className="font-display font-black text-4xl sm:text-5xl md:text-6xl leading-[1] tracking-tight text-white mb-6">
+              <h2 id="contact-title" className="font-display font-black text-4xl sm:text-5xl md:text-6xl leading-[1] tracking-tight text-white mb-6">
                 Let's create<br />
                 something<br />
                 <span className="bg-gradient-to-r from-[#FF8A00] to-[#FFC700] bg-clip-text text-transparent">
@@ -140,12 +140,13 @@ export default function ContactSection() {
             >
               {/* Name */}
               <div className="flex flex-col gap-2">
-                <label className="text-[#D7E2EA]/50 uppercase tracking-[0.15em] text-[11px] font-bold">
+                <label htmlFor="name" className="text-[#D7E2EA]/50 uppercase tracking-[0.15em] text-[11px] font-bold">
                   Name
                 </label>
                 <input
                   type="text"
                   name="name"
+                  id="name"
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Your Name"
@@ -156,12 +157,13 @@ export default function ContactSection() {
 
               {/* Email */}
               <div className="flex flex-col gap-2">
-                <label className="text-[#D7E2EA]/50 uppercase tracking-[0.15em] text-[11px] font-bold">
+                <label htmlFor="email" className="text-[#D7E2EA]/50 uppercase tracking-[0.15em] text-[11px] font-bold">
                   Email
                 </label>
                 <input
                   type="email"
                   name="email"
+                  id="email"
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="your@email.com"
@@ -172,11 +174,12 @@ export default function ContactSection() {
 
               {/* Project Type */}
               <div className="flex flex-col gap-2">
-                <label className="text-[#D7E2EA]/50 uppercase tracking-[0.15em] text-[11px] font-bold">
+                <label htmlFor="project-type" className="text-[#D7E2EA]/50 uppercase tracking-[0.15em] text-[11px] font-bold">
                   Project Type
                 </label>
                 <select
                   name="projectType"
+                  id="project-type"
                   value={formData.projectType}
                   onChange={handleChange}
                   required
@@ -196,11 +199,12 @@ export default function ContactSection() {
 
               {/* Message */}
               <div className="flex flex-col gap-2">
-                <label className="text-[#D7E2EA]/50 uppercase tracking-[0.15em] text-[11px] font-bold">
+                <label htmlFor="message" className="text-[#D7E2EA]/50 uppercase tracking-[0.15em] text-[11px] font-bold">
                   Message
                 </label>
                 <textarea
                   name="message"
+                  id="message"
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Tell me about your project..."

@@ -44,7 +44,7 @@ export default function AboutSection() {
                 <div className="relative w-full aspect-square sm:aspect-[4/5] overflow-hidden rounded-xl">
                   <img
                     src={aboutMeImage}
-                    alt="Ayush portrait"
+                    alt="Ayush Sanodiya - Professional Creative Graphic Designer Portrait"
                     className="w-full h-full object-cover grayscale brightness-110 object-[center_top]"
                   />
                   <div className="absolute inset-y-0 left-[60%] w-[15%] bg-[#FFFF00] mix-blend-multiply opacity-80"></div>
@@ -145,7 +145,7 @@ export default function AboutSection() {
               <div className="relative w-full aspect-[4/5] lg:aspect-auto lg:h-[80vh] overflow-hidden rounded-3xl lg:rounded-none">
                 <img
                   src={aboutMeImage}
-                  alt="Ayush portrait"
+                  alt="Ayush Sanodiya - Professional Creative Graphic Designer Portrait"
                   className="w-full h-full object-cover grayscale brightness-110 lg:object-[center_top]"
                 />
                 {/* Yellow Stripe Accent */}

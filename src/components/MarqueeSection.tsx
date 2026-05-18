@@ -29,6 +29,16 @@ const bottomRowLogos = [
 
 const allLogos = [...topRowLogos, ...bottomRowLogos];
 
+function getLogoAlt(src: string): string {
+  const filename = src.split('/').pop() || "";
+  const nameWithoutHash = filename.split('-')[0] || filename;
+  const cleanName = nameWithoutHash
+    .replace(/\.[^/.]+$/, "") // remove extension
+    .replace(/_/g, " ")       // replace underscores with spaces
+    .replace(/\b\w/g, c => c.toUpperCase()); // capitalize words
+  return cleanName ? `${cleanName} Brand Logo` : "Client Brand Logo";
+}
+
 /* ------------------------------------------------------------------ */
 /*  Reusable Draggable Marquee with auto-scroll + drag interaction    */
 /* ------------------------------------------------------------------ */
@@ -125,7 +135,7 @@ function DraggableMarquee({
       >
         {quadLogos.map((src, i) => (
           <div key={i} className={cardClass}>
-            <img src={src} loading="lazy" draggable={false} className={imgClass} alt="Client Logo" />
+            <img src={src} loading="lazy" draggable={false} className={imgClass} alt={getLogoAlt(src)} />
           </div>
         ))}
       </motion.div>
@@ -138,7 +148,7 @@ function DraggableMarquee({
 /* ------------------------------------------------------------------ */
 export default function MarqueeSection() {
   return (
-    <section className="bg-[#0C0C0C] flex flex-col justify-center overflow-hidden pt-20 pb-24 sm:py-32 md:py-40 relative rounded-t-[40px] sm:rounded-t-[60px] z-10 border-t border-white/5">
+    <section aria-label="Brands and Clients" className="bg-[#0C0C0C] flex flex-col justify-center overflow-hidden pt-20 pb-24 sm:py-32 md:py-40 relative rounded-t-[40px] sm:rounded-t-[60px] z-10 border-t border-white/5">
       {/* Header */}
       <div className="max-w-7xl mx-auto mb-12 md:mb-28 text-center px-4">
         <motion.div
