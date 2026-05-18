@@ -15,11 +15,11 @@ echo (Or close this window to cancel).
 pause > nul
 echo.
 echo [2/4] Staging modified files...
-git add src/components/ProjectsSection.tsx src/index.css
+git add .
 echo Done.
 echo.
 echo [3/4] Creating commit...
-git commit -m "feat: add interactive 3D flip cards & mobile spacing optimizations for Works"
+git commit -m "style: redesign footer to be ultra-clean, minimal, and centered"
 echo Done.
 echo.
 echo [4/4] Pushing changes to remote GitHub repository...
