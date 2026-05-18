@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ayushsanodiya.com/sitemap.xml
+Sitemap: https://ayushsanodiya.vercel.app/sitemap.xml
