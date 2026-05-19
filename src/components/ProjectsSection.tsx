@@ -263,17 +263,66 @@ export default function ProjectsSection({
     return () => window.removeEventListener("setCategory", handleSetCategory);
   }, []);
 
-  // Prevent scroll when modal overlay is open
+  // Prevent scroll when modal overlay is open and handle auto-closure on navigation
   useEffect(() => {
-    if (selectedProject) {
+    if (selectedProject || selectedLightboxImage) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
     }
+
+    const handleClose = () => {
+      setSelectedProject(null);
+      setSelectedLightboxImage(null);
+    };
+
+    const handleGlobalClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+
+      // If user clicked a navigation item (logo, navbar, hash link, etc.)
+      if (
+        target.closest("nav") ||
+        target.closest("header") ||
+        target.closest("a")?.getAttribute("href")?.startsWith("#")
+      ) {
+        setSelectedProject(null);
+        setSelectedLightboxImage(null);
+        return;
+      }
+
+      // If click is outside the lightbox container but lightbox is open, close lightbox
+      if (selectedLightboxImage && !target.closest('[data-lightbox-container="true"]')) {
+        setSelectedLightboxImage(null);
+        return;
+      }
+
+      // If the click is outside the project modal content container, close it
+      if (selectedProject && !target.closest('[data-modal-content="project-details"]')) {
+        if (!target.closest('[data-lightbox-container="true"]')) {
+          setSelectedProject(null);
+        }
+      }
+    };
+
+    const handleScroll = () => {
+      // If the main window scrolls, auto-close both
+      setSelectedProject(null);
+      setSelectedLightboxImage(null);
+    };
+
+    window.addEventListener("hashchange", handleClose);
+    window.addEventListener("closeProjectModal", handleClose);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    document.addEventListener("click", handleGlobalClick, { capture: true });
+
     return () => {
       document.body.style.overflow = "";
+      window.removeEventListener("hashchange", handleClose);
+      window.removeEventListener("closeProjectModal", handleClose);
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("click", handleGlobalClick, { capture: true });
     };
-  }, [selectedProject]);
+  }, [selectedProject, selectedLightboxImage]);
 
   const filteredProjects = activeCategory === "All"
     ? initialProjects
@@ -342,6 +391,7 @@ export default function ProjectsSection({
             className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-xl"
           >
             <motion.div
+              data-modal-content="project-details"
               initial={{ opacity: 0, scale: 0.92, y: 30 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.92, y: 30 }}
@@ -439,6 +489,7 @@ export default function ProjectsSection({
       <AnimatePresence>
         {selectedLightboxImage && (
           <motion.div
+            data-lightbox-container="true"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

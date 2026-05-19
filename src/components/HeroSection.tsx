@@ -27,13 +27,24 @@ export default function HeroSection() {
       <FadeIn as="header" y={-20} className="fixed top-0 left-0 w-full px-4 md:px-10 py-3 md:py-4 z-50 pointer-events-none">
         <nav className="flex justify-between items-center w-full max-w-7xl mx-auto pointer-events-auto">
           <Magnet padding={50} strength={2}>
-            <div className="font-display font-black text-base md:text-xl tracking-[0.05em] text-white cursor-pointer">AYUSH.</div>
+            <div 
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+                window.dispatchEvent(new CustomEvent("closeProjectModal"));
+              }}
+              className="font-display font-black text-base md:text-xl tracking-[0.05em] text-white cursor-pointer"
+            >
+              AYUSH.
+            </div>
           </Magnet>
           <div className="flex gap-3 sm:gap-6 md:gap-10 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 md:px-8">
             {["Home", "About", "Works", "Contact"].map((item) => (
               <a
                 key={item}
                 href={item === "Home" ? "#" : item === "Works" ? "#works" : `#${item.toLowerCase()}`}
+                onClick={() => {
+                  window.dispatchEvent(new CustomEvent("closeProjectModal"));
+                }}
                 className="text-[#D7E2EA] font-medium uppercase tracking-wider text-[8px] xs:text-[10px] md:text-xs hover:text-white transition-colors duration-200 py-1"
               >
                 {item}

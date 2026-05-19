@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
+User-agent: Googlebot-Image
+Disallow: /logos/
+
 Sitemap: https://ayushsanodiya.vercel.app/sitemap.xml
