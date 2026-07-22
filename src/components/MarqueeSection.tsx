@@ -1,5 +1,5 @@
+import React, { useRef, useEffect, useCallback } from "react";
 import { motion, useMotionValue } from "motion/react";
-import { useRef, useEffect, useCallback } from "react";
 const topRowLogos = [
   "/logos/client1.png",
   "/logos/client2.png",

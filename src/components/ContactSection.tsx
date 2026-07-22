@@ -1,5 +1,5 @@
+import React, { useState } from "react";
 import { motion } from "motion/react";
-import { useState } from "react";
 import FadeIn from "./FadeIn";
 
 const socialLinks = [

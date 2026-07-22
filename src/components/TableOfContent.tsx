@@ -1,8 +1,8 @@
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
 const tocItems = [
-  { id: "01", title: "BRAND IDENTITY", subtitle: "Logo + Brand Guidelines + Stationery" },
+  { id: "01", title: "VISUAL IDENTITY", subtitle: "Logo + Brand Guidelines + Stationery" },
   { id: "02", title: "LOGO SYSTEMS", subtitle: "Custom Logos + Variations + Source Files" },
   { id: "03", title: "SOCIAL MEDIA KITS", subtitle: "Posts + Stories + Reels Covers + Templates" },
   { id: "04", title: "AD CREATIVES", subtitle: "Product Ads + Banners + Campaign Visuals" },

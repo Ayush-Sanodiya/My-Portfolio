@@ -1,5 +1,5 @@
+import React, { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "motion/react";
-import { useRef, useState, useEffect } from "react";
 import LiveProjectButton from "./LiveProjectButton";
 
 // Import all category images from assets
@@ -47,7 +47,7 @@ interface Project {
 const defaultProjects: Project[] = [
   {
     id: "01",
-    category: "Branding",
+    category: "Visual Design",
     title: "Branding",
     images: [argusSolutions, brightMarketing, niviware, yaanaaiDesign],
     galleryItems: [
@@ -79,7 +79,7 @@ const defaultProjects: Project[] = [
     description: "A comprehensive brand transformation project focusing on cohesive design systems, typographic guidelines, and a high-end visual language. Designed to establish a strong, premium presence across physical and digital touchpoints.",
     tags: ["Brand Guidelines", "Typography", "Visual System", "Stationery", "Corporate Identity"],
     layoutData: {
-      titleTop1: "Brand",
+      titleTop1: "Visual",
       titleTop2: "",
       titleBottom: "Identity",
       subtitleMiddle: "Identity Meets",
@@ -235,7 +235,7 @@ const defaultProjects: Project[] = [
 ];
 
 
-const categories = ["All", "Branding", "Logo Design", "Social Media", "Product Ads", "Poster Design"];
+const categories = ["All", "Visual Design", "Logo Design", "Social Media", "Product Ads", "Poster Design"];
 
 interface ProjectsSectionProps {
   id?: string;
@@ -531,13 +531,13 @@ export default function ProjectsSection({
   );
 }
 
-function GalleryFlipCard({
-  item,
-  onViewImage
-}: {
+const GalleryFlipCard: React.FC<{
   item: GalleryItem;
   onViewImage: () => void;
-}) {
+}> = ({
+  item,
+  onViewImage
+}) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
